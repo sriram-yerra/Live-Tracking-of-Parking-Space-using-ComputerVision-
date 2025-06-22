@@ -21,7 +21,9 @@ try:
 except: # file not found, unpickling error, etc
     posList = []
 
-
+# This is the callback functiIn Python (and programming in general), a callback is a function passed as an argument 
+# to another function, so it can be called (invoked) later when something happens — usually in response to an event.
+# on that gets called when the mouse is used inside that window.
 def mouseClick(events, x, y, flags, params):
     if events == cv2.EVENT_LBUTTONDOWN:
         posList.append((x, y))
@@ -45,6 +47,7 @@ while True:
 
     # the title should be the same as the imshow (parking Image)
     cv2.setMouseCallback("parking Image", mouseClick)
+    # 'mouseClick' is a callback function   
     # It tells OpenCV to listen for mouse events (like clicks) in a window and handle them with a function.
 
     cv2.waitKey(1)
