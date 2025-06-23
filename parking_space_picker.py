@@ -1,3 +1,5 @@
+# June 23
+
 import cv2
 # print("OpenCV version:", cv2.__version__)
 
@@ -38,7 +40,8 @@ def mouseClick(events, x, y, flags, params):
                 posList.pop(i)
     
 while True:
-    img = cv2.imread("/home/sriram/Documents/Live-Tracking-of-Parking-Space-using-ComputerVision-/carParkImg.png")
+    # img = cv2.imread("/home/sriram/Documents/Live-Tracking-of-Parking-Space-using-ComputerVision-/carParkImg.png")
+    img = cv2.imread('carParkImg.png')
 
     for pos in posList:
         cv2.rectangle(img, pos, (pos[0] + width, pos[1] + height), (0, 255, 0), 2)
